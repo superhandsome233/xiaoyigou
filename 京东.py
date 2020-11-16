@@ -1,24 +1,3 @@
-'''
-爬取京东商品信息:
-功能: 通过chromeDrive进行模拟访问需要爬取的京东商品详情页(https://item.jd.com/100003196609.html)并且程序支持多个页面爬取，输入时以逗号分隔，
-思路: 创建webdriver对象并且调用get方法请求url,进入页面根据dom结构爬取一些简要信息，之后
-通过模拟点击商品评价按钮，再分别解析没个用户的评价信息，到每页的底部时，模拟点击下一页按钮
-获取新的一页数据。
-    提取商品信息:
-        商品名称: {goods_name}
-        商品价格: {goods_price}
-        好评度: {percent_con}
-        评价标签: {tags}
-        评价类型
-        姓名：{username}
-        星级：{star}
-        文字：{word}
-        评价图片: {picList}
-        购买类型: {order_type}
-        购买日期：{order_date}
-        点赞人数： {likes}
-        评论人数: {
-'''
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
@@ -147,8 +126,6 @@ if __name__ == '__main__':
     # 获取用户商品的url
     urlList = input('请输入爬取商品url(以逗号分割):').strip()
     urlList = urlList.split(',')
-
-    # 可视化界面  需要下载 chromeDiiriver 及 chrome浏览器
     driver = webdriver.Chrome()
     driver.implicitly_wait(5)
 
