@@ -13,7 +13,6 @@ import os
 def get_good(name):
         driver = webdriver.Chrome()
 
-        # 1、往京东主页发送请求
         driver.get('https://www.miaomiaozhe.com/search?q='+name)
         wait = WebDriverWait(driver, 100)
         js_code = '''
@@ -58,10 +57,7 @@ if __name__ == '__main__':
     name = "耳机"
     good_list = get_good(name)
     header = ['商品名称','商品图片',"商品链接"]  # 数据列名
-    # test.csv表示如果在当前目录下没有此文件的话，则创建一个csv文件
-    # a表示以“追加”的形式写入，如果是“w”的话，表示在写入之前会清空原文件中的数据
-    # newline是数据之间不加空行
-    # encoding='utf-8'表示编码格式为utf-8，如果不希望在excel中打开csv文件出现中文乱码的话，将其去掉不写也行。
+
     # df = pd.read_csv('test.csv',encoding='utf-8')
     # df.drop(header,axis=1)
     # df.close()
