@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "mypages/date/date"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "延迟购买",
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light"
+  },
+  "sitemapLocation": "sitemap.json"
+}

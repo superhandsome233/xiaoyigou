@@ -1,0 +1,11 @@
+<view class="df yuding" style="padding:24rpx 0;">
+  <view class="fs26">请选择最大延迟期限：</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+     <input value='{{time}}' name="dd_time" placeholder='选择时间' class="fs26 changetime"/>
+  </picker>
+ </view>
+ <span style="font-family:Comic Sans MS;font-size:18px;color:#333333;"><view class="container" class="zn-uploadimg">  
+      
+    <button type="primary"bindtap="modalcnt">确认</button>   
+ 
+</view></span>  
